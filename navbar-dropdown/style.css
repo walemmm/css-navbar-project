@@ -1,0 +1,71 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: red;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #777;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #777;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    width: 150px; /* Ensures a consistent dropdown width */
+    z-index: 1;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content li a {
+    padding: 10px 15px;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    flex-direction: column; /* Ensures the dropdown displays vertically */
+}
+
+nav ul li:hover > a {
+    background-color: #777; /* Keeps the parent menu item highlighted when hovering over the dropdown */
+}
